@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Description>ClickHouse support for .NET Aspire.</Description>
+    <Authors>Cristi Pufu</Authors>
+    <AssemblyName>ClickHouse.Hosting</AssemblyName>
+    <IsPackable>true</IsPackable>
+    <PackageId>ClickHouse.Hosting</PackageId>
+    <PackageTags>aspire hosting ClickHouse</PackageTags>
+    <PackageProjectUrl>https://github.com/cristipufu/aspire-clickhouse-hosting</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/cristipufu/aspire-clickhouse-hosting</RepositoryUrl>
+    <Version>1.0.0</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md">
+       <Pack>True</Pack>
+       <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>ClickHouse.Hosting.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+	
+</Project>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>3ed7e23b-0636-490a-a141-115b88e9c1cb</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ClickHouse.Hosting\ClickHouse.Hosting.csproj" IsAspireProjectResource="false" />
+    <ProjectReference Include="..\ClickHouse.DemoApi\ClickHouse.DemoApi.csproj" />
+  </ItemGroup>
+
+</Project>

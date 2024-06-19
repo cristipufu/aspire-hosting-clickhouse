@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.0.0
+MinimumVisualStudioVersion = 17.8.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClickHouse.AppHost", "playground\ClickHouse.AppHost\ClickHouse.AppHost.csproj", "{A79509B7-644E-460F-AEEE-78A43E7DEAFA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClickHouse.ServiceDefaults", "playground\ClickHouse.ServiceDefaults\ClickHouse.ServiceDefaults.csproj", "{7EA57476-3014-4332-934F-0AF408ECB41F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClickHouse.Hosting", "src\ClickHouse.Hosting\ClickHouse.Hosting.csproj", "{20BBD9FF-2B92-40D1-95DA-ECFF30C0F452}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClickHouse.DemoApi", "playground\ClickHouse.DemoApi\ClickHouse.DemoApi.csproj", "{08BBDAB4-6010-4F38-9E78-1F24CDFDADA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CF139428-156A-453B-A793-124B6A310396}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "playground", "playground", "{CADEE0BF-084C-4E49-8F52-D2CF315D8380}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{128C10B2-663A-4DF7-8897-99AB7B985F6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClickHouse.Hosting.Tests", "test\ClickHouse.Hosting.Tests\ClickHouse.Hosting.Tests.csproj", "{396417D7-CE01-42CC-9E0E-C0647668529B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A79509B7-644E-460F-AEEE-78A43E7DEAFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A79509B7-644E-460F-AEEE-78A43E7DEAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A79509B7-644E-460F-AEEE-78A43E7DEAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A79509B7-644E-460F-AEEE-78A43E7DEAFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA57476-3014-4332-934F-0AF408ECB41F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA57476-3014-4332-934F-0AF408ECB41F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA57476-3014-4332-934F-0AF408ECB41F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA57476-3014-4332-934F-0AF408ECB41F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20BBD9FF-2B92-40D1-95DA-ECFF30C0F452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20BBD9FF-2B92-40D1-95DA-ECFF30C0F452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20BBD9FF-2B92-40D1-95DA-ECFF30C0F452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20BBD9FF-2B92-40D1-95DA-ECFF30C0F452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08BBDAB4-6010-4F38-9E78-1F24CDFDADA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BBDAB4-6010-4F38-9E78-1F24CDFDADA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BBDAB4-6010-4F38-9E78-1F24CDFDADA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BBDAB4-6010-4F38-9E78-1F24CDFDADA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{396417D7-CE01-42CC-9E0E-C0647668529B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{396417D7-CE01-42CC-9E0E-C0647668529B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{396417D7-CE01-42CC-9E0E-C0647668529B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{396417D7-CE01-42CC-9E0E-C0647668529B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A79509B7-644E-460F-AEEE-78A43E7DEAFA} = {CADEE0BF-084C-4E49-8F52-D2CF315D8380}
+		{7EA57476-3014-4332-934F-0AF408ECB41F} = {CADEE0BF-084C-4E49-8F52-D2CF315D8380}
+		{20BBD9FF-2B92-40D1-95DA-ECFF30C0F452} = {CF139428-156A-453B-A793-124B6A310396}
+		{08BBDAB4-6010-4F38-9E78-1F24CDFDADA4} = {CADEE0BF-084C-4E49-8F52-D2CF315D8380}
+		{396417D7-CE01-42CC-9E0E-C0647668529B} = {128C10B2-663A-4DF7-8897-99AB7B985F6F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5FD1DBB-9854-4C61-8B0B-0425709F0231}
+	EndGlobalSection
+EndGlobal

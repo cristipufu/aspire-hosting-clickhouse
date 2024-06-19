@@ -1,0 +1,9 @@
+@ClickHouseResource.DemoApi_HostAddress = http://localhost:5262
+
+GET {{ClickHouseResource.DemoApi_HostAddress}}/version/
+Accept: application/json
+
+###
+
+GET {{ClickHouseResource.DemoApi_HostAddress}}/table-functions/
+Accept: application/json

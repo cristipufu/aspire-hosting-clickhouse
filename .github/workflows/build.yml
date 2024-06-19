@@ -1,0 +1,28 @@
+name: Build & Test
+on:
+  push:
+    branches:
+      - master
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+jobs:
+  build:
+    name: Build and analyze
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  
+          ref: ${{ github.event.pull_request.head.ref || github.ref }}
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v3     
+        with:
+          dotnet-version: '8.0.x'
+      - name: Build and analyze
+        shell: powershell
+        run: |
+          dotnet tool install --global dotnet-coverage
+          dotnet build --no-incremental --configuration Debug
+          dotnet-coverage collect 'dotnet test --configuration Debug --no-build' -f xml -o 'coverage.xml'
+          $testExitCode = $LASTEXITCODE
+          if ($testExitCode -ne 0) { exit $testExitCode }
