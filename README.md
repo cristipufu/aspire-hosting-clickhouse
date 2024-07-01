@@ -1,7 +1,7 @@
 # ClickHouse.Hosting library
 
 [![NuGet](https://img.shields.io/nuget/v/ClickHouse.Hosting)](https://www.nuget.org/packages/ClickHouse.Hosting)
-[![GitHub](https://img.shields.io/github/license/cristipufu/aspire-hosting-clickhouse)](https://github.com/cristipufu/aspnetcore-redis-rate-limiting/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/cristipufu/aspire-hosting-clickhouse)](https://github.com/cristipufu/aspire-hosting-clickhouse/blob/master/LICENSE)
 
 Provides extension methods and resource definitions for a .NET Aspire AppHost to configure a ClickHouse resource.
 
