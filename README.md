@@ -27,6 +27,16 @@ var api = builder.AddProject<Projects.ClickHouse_DemoApi>("api")
        .WithReference(db);
 ```
 
+## Optional Parameters
+When using the `AddClickHouse` method, you can specify the following optional parameters:
+
+| Parameter | Description | Default Value |
+|-----------|-------------|---------------|
+| `userName` | Username for ClickHouse authentication | - |
+| `password` | Password for ClickHouse authentication | - |
+| `port` | Port number for ClickHouse container | 8123 |
+| `imageTag` | Version tag of ClickHouse server image | "25.6" |
+
 
 ## Feedback & contributing
 
