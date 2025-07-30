@@ -19,19 +19,21 @@ public static class ClickHouseBuilderExtensions
     /// <param name="userName">The parameter used to provide the user name for the ClickHouse resource. If <see langword="null"/> a default value will be used.</param>
     /// <param name="password">The parameter used to provide the administrator password for the ClickHouse resource. If <see langword="null"/> a random password will be generated.</param>
     /// <param name="port">The host port used when launching the container. If null a random port will be assigned.</param>
+    /// <param name="imageTag">An optional image tag referring to https://hub.docker.com/r/clickhouse/clickhouse-server/tags</param>
     /// <returns>A reference to the <see cref="IResourceBuilder{T}"/>.</returns>
     public static IResourceBuilder<ClickHouseServerResource> AddClickHouse(this IDistributedApplicationBuilder builder,
         string name,
         IResourceBuilder<ParameterResource>? userName = null,
         IResourceBuilder<ParameterResource>? password = null,
-        int? port = null)
+        int? port = null, 
+        string? imageTag = null)
     {
         var passwordParameter = password?.Resource ?? ParameterResourceBuilderExtensions.CreateDefaultPasswordParameter(builder, $"{name}-password");
 
         var server = new ClickHouseServerResource(name, userName?.Resource, passwordParameter);
         return builder.AddResource(server)
                       .WithEndpoint(port: port, targetPort: 8123, name: ClickHouseServerResource.PrimaryEndpointName) // HTTP default port is 8123.
-                      .WithImage(ClickHouseContainerImageTags.Image, ClickHouseContainerImageTags.Tag)
+                      .WithImage(ClickHouseContainerImageTags.Image, imageTag ?? ClickHouseContainerImageTags.Tag)
                       .WithImageRegistry(ClickHouseContainerImageTags.Registry)
                       .WithEnvironment(context =>
                       {
